@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: drivers
+#
+#  id         :integer          not null, primary key
+#  cnh        :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  category   :string
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
