@@ -10,6 +10,8 @@
 #
 
 class Student < ApplicationRecord
+	belongs_to :person
+	
 	validates :registration, uniqueness: true
 	validates :registration, presence: true
 end

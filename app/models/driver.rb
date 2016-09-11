@@ -7,9 +7,12 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  category   :string
+#  person_id  :integer
 #
 
 class Driver < ApplicationRecord
+	belongs_to :person
+	
 	validates :cnh, presence: true
 	validates :cnh, uniqueness: true
 	validates :cnh, numericality: true

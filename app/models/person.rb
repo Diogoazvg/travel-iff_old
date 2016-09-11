@@ -14,6 +14,9 @@
 #
 
 class Person < ApplicationRecord
+	has_many :people
+	has_many :drivers
+	
 	validates :name, presence: true
 	validates :phone, presence: true
 	validates :phone, numericality: true
