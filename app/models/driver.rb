@@ -10,4 +10,8 @@
 #
 
 class Driver < ApplicationRecord
+	validates :cnh, presence: true
+	validates :cnh, uniqueness: true
+	validates :cnh, numericality: true
+	validates :category, presence: true
 end
