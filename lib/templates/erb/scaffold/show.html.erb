@@ -1,0 +1,24 @@
+<div class='page-header'>
+  <h1>
+    <%%= t('<%= class_name.humanize %> Info') %>
+    <div class='pull-right'>
+      <%%= link_to edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-success' do %>
+        <i class='glyphicon glyphicon-pencil'></i> <%%= t('Edit') %>
+      <%% end %>
+      <%%= link_to <%= plural_table_name %>_path, class: 'btn btn-default' do %>
+        <i class='glyphicon glyphicon-chevron-left'></i> <%%= t('Back') %>
+      <%%= end %>
+    </div>
+  </h1>
+</div>
+
+<div class='panel panel-default'>
+  <div class='panel-body'>
+  <%- attributes.each do |attribute| -%>
+    <p>
+      <strong><%= attribute.name.humanize.camelize %></strong>
+      <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
+    </p>
+  <%- end -%>
+  </div>
+</div>
