@@ -2,12 +2,9 @@
   <h1>
     <%%= t('Listing <%= class_name.pluralize %>') %> (<%%= @count_<%= plural_table_name %> %>)  <small><%%= @<%= singular_table_name %> %></small>
     <div class='pull-right'>
-      <%%= link_to new_<%= singular_table_name %>_path(), class: 'btn btn-success' do %>
+      <%%= link_to new_<%= singular_table_name %>_path(), class: 'btn btn-info' do %>
         <i class='glyphicon glyphicon-plus'></i> <%%= t('New <%= class_name %>') %>
       <%% end %>
-      <%%= link_to <%= plural_table_name %>_path, class: 'btn btn-default' do %>
-      <i class='glyphicon glyphicon-chevron-left'></i> <%%= t('Back') %>
-      <%%= end %>
     </div>
   </h1>
 </div>
@@ -38,4 +35,4 @@
     <%% end %>
   </tbody>
 </table>
-<%%= paginate @<%= plural_table_name %> %>
+<!--%%= paginate @<%= plural_table_name %> %-->

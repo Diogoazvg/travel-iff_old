@@ -60,4 +60,3 @@ gem 'cpf_utils', '~> 1.2', '>= 1.2.1'
 gem 'cnpj_utils', '~> 1.0', '>= 1.0.1'
 gem 'simple-form-datepicker', '~> 0.1.3'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
-
