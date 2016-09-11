@@ -1,0 +1,36 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Listing Drivers') %> (<%= @count_drivers %>)  <small><%= @driver %></small>
+    <div class='pull-right'>
+      <%= link_to new_driver_path(), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-plus'></i> <%= t('New Driver') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<table class='table table-responsive table-hover table-stripped' id='drivers'>
+  <thead>
+  <tr>
+      <th>Cnh</th>
+      <th>Category</th>
+    <th></th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+    <% @drivers.each do |driver| %>
+    <tr>
+        <td><%= driver.cnh %></td>
+        <td><%= driver.Category %></td>
+      <td class='actions text-center'>
+        <%= link_to t('Show'), driver_path(driver), class: 'btn btn-sm btn-info' %>
+        <%= link_to t('Edit'), edit_driver_path(driver), class: 'btn btn-sm btn-warning' %>
+        <%= link_to t('Destroy'), driver_path(driver), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<!--%%= paginate @drivers %-->
