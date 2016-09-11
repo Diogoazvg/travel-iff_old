@@ -9,4 +9,6 @@
 #
 
 class Student < ApplicationRecord
+	validates :registration, uniqueness: true
+	validates :registration, presence: true
 end
