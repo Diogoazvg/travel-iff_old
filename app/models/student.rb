@@ -14,4 +14,6 @@ class Student < ApplicationRecord
 	
 	validates :registration, uniqueness: true
 	validates :registration, presence: true
+
+	accepts_nested_attributes_for :person
 end

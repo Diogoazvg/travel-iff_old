@@ -5,6 +5,14 @@
   <div class="panel-heading ">Table_name</div>
     <div class="panel-body">
       <div class="form-inputs">
+          <%= f.simple_fields_for :person, wrapper: :horizontal_form do |person| %>
+            <%= person.input :name %>
+            <%= person.input :phone %>
+            <%= person.input :address %>
+            <%= person.input :identity %>
+            <%= person.input :cpf %>
+            <%= person.input :birth %>
+          <% end %>
           <%= f.input :registration %>
       </div>
 

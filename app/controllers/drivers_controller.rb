@@ -26,7 +26,6 @@ class DriversController < ApplicationController
   # POST /drivers.json
   def create
     @driver = Driver.new(driver_params)
-    #@driver.build_person
 
     respond_to do |format|
       if @driver.save
