@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912190818) do
+ActiveRecord::Schema.define(version: 20160912201743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,8 @@ ActiveRecord::Schema.define(version: 20160912190818) do
     t.float    "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "travel_id"
+    t.index ["travel_id"], name: "index_vehicles_on_travel_id", using: :btree
   end
 
   add_foreign_key "drivers", "people"
@@ -83,4 +85,5 @@ ActiveRecord::Schema.define(version: 20160912190818) do
   add_foreign_key "students", "events"
   add_foreign_key "students", "people"
   add_foreign_key "students", "travels"
+  add_foreign_key "vehicles", "travels"
 end

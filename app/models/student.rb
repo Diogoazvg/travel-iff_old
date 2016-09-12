@@ -13,8 +13,8 @@
 
 class Student < ApplicationRecord
 	belongs_to :person
-	belongs_to :event_id
-	belongs_to :travel_id
+	belongs_to :event
+	belongs_to :travel
 	
 	validates :registration, uniqueness: true
 	validates :registration, presence: true

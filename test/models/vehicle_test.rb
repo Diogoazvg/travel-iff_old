@@ -8,6 +8,7 @@
 #  price      :float
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  travel_id  :integer
 #
 
 require 'test_helper'
