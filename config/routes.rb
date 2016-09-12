@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :travels
   resources :events
   resources :students
   resources :drivers

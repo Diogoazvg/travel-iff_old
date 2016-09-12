@@ -1,0 +1,36 @@
+<div class='page-header'>
+  <h1>
+    <%= t('Listing Travels') %> (<%= @count_travels %>)  <small><%= @travel %></small>
+    <div class='pull-right'>
+      <%= link_to new_travel_path(), class: 'btn btn-info' do %>
+        <i class='glyphicon glyphicon-plus'></i> <%= t('New Travel') %>
+      <% end %>
+    </div>
+  </h1>
+</div>
+
+<table class='table table-responsive table-hover table-stripped' id='travels'>
+  <thead>
+  <tr>
+      <th>Name</th>
+      <th>Day</th>
+    <th></th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+    <% @travels.each do |travel| %>
+    <tr>
+        <td><%= travel.name %></td>
+        <td><%= travel.day %></td>
+      <td class='actions text-center'>
+        <%= link_to t('Show'), travel_path(travel), class: 'btn btn-sm btn-info' %>
+        <%= link_to t('Edit'), edit_travel_path(travel), class: 'btn btn-sm btn-warning' %>
+        <%= link_to t('Destroy'), travel_path(travel), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<!--%%= paginate @travels %-->
