@@ -7,6 +7,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  person_id    :integer
+#  event_id     :integer
 #
 
 class Student < ApplicationRecord
