@@ -14,9 +14,9 @@
 #
 
 class Person < ApplicationRecord
-	has_many :people
-	has_many :drivers
-	
+	has_many :people, inverse_of: :person 
+	has_many :drivers, inverse_of: :person
+
 	validates :name, presence: true
 	validates :phone, presence: true
 	validates :phone, numericality: true
@@ -28,5 +28,4 @@ class Person < ApplicationRecord
 	validates :cpf, uniqueness: true
 	validates :cpf, numericality: true
 	validates :birth, presence: true
-	validates :birth, numericality: true
 end

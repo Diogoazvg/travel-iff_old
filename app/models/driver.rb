@@ -11,10 +11,12 @@
 #
 
 class Driver < ApplicationRecord
-	belongs_to :person
+	belongs_to :person, inverse_of: :drivers
 	
 	validates :cnh, presence: true
 	validates :cnh, uniqueness: true
 	validates :cnh, numericality: true
 	validates :category, presence: true
+
+	accepts_nested_attributes_for :person
 end
