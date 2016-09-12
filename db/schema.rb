@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912181211) do
+ActiveRecord::Schema.define(version: 20160912190818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20160912181211) do
     t.date     "day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "travel_id"
+    t.index ["travel_id"], name: "index_events_on_travel_id", using: :btree
   end
 
   create_table "people", force: :cascade do |t|
@@ -55,8 +57,10 @@ ActiveRecord::Schema.define(version: 20160912181211) do
     t.datetime "updated_at",   null: false
     t.integer  "person_id"
     t.integer  "event_id"
+    t.integer  "travel_id"
     t.index ["event_id"], name: "index_students_on_event_id", using: :btree
     t.index ["person_id"], name: "index_students_on_person_id", using: :btree
+    t.index ["travel_id"], name: "index_students_on_travel_id", using: :btree
   end
 
   create_table "travels", force: :cascade do |t|
@@ -75,6 +79,8 @@ ActiveRecord::Schema.define(version: 20160912181211) do
   end
 
   add_foreign_key "drivers", "people"
+  add_foreign_key "events", "travels"
   add_foreign_key "students", "events"
   add_foreign_key "students", "people"
+  add_foreign_key "students", "travels"
 end

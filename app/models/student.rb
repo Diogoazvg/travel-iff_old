@@ -8,10 +8,13 @@
 #  updated_at   :datetime         not null
 #  person_id    :integer
 #  event_id     :integer
+#  travel_id    :integer
 #
 
 class Student < ApplicationRecord
 	belongs_to :person
+	belongs_to :event_id
+	belongs_to :travel_id
 	
 	validates :registration, uniqueness: true
 	validates :registration, presence: true
