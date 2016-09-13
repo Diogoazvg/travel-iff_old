@@ -8,6 +8,7 @@
 #  updated_at :datetime         not null
 #  category   :string
 #  person_id  :integer
+#  vehicle_id :integer
 #
 
 require 'test_helper'

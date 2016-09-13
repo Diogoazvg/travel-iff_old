@@ -15,4 +15,5 @@
 class Vehicle < ApplicationRecord
 	belongs_to :travel
 	belongs_to :bus_company
+	has_many :drivers
 end
