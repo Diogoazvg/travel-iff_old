@@ -8,10 +8,12 @@
 #  updated_at :datetime         not null
 #  category   :string
 #  person_id  :integer
+#  vehicle_id :integer
 #
 
 class Driver < ApplicationRecord
 	belongs_to :person, inverse_of: :drivers
+	belongs_to :vehicle
 	
 	validates :cnh, presence: true
 	validates :cnh, uniqueness: true

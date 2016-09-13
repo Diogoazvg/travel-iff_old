@@ -8,6 +8,12 @@ pt-BR:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
   date:
+    datepicker:
+      default: "dd/mm/yyyy"
+      long: "MM dd, yyyy"
+    formats:
+      default: "dd/mm/yyyy"
+      long: ! '%B %d, %Y'
     abbr_day_names:
     - Dom
     - Seg

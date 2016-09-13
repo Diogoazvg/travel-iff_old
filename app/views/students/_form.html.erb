@@ -11,7 +11,7 @@
             <%= person.input :address %>
             <%= person.input :identity %>
             <%= person.input :cpf %>
-            <%= person.input :birth %>
+            <%= person.input :birth, as: :bootstrap_datepicker, input_html: {class: "form-control"} %>
           <% end %>
           <%= f.input :registration %>
       </div>

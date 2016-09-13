@@ -7,6 +7,8 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  person_id    :integer
+#  event_id     :integer
+#  travel_id    :integer
 #
 
 require 'test_helper'
