@@ -2,11 +2,12 @@
 #
 # Table name: travels
 #
-#  id         :integer          not null, primary key
-#  name       :string
-#  day        :date
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  name        :string
+#  day         :date
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  description :text
 #
 
 class Travel < ApplicationRecord
@@ -17,5 +18,5 @@ class Travel < ApplicationRecord
 	validates :name, presence: true
 	validates :name, uniqueness: true
 	validates :day, presence: true
-	validates :day, numericality: true
+	validates :description, presence: true
 end
