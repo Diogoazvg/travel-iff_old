@@ -20,7 +20,6 @@ class Person < ApplicationRecord
 	validates :name, presence: true
 	validates :phone, presence: true
 	validates :phone, numericality: true
-	validates :address, presence: true
 	validates :identity, presence: true
 	validates :identity, uniqueness: true
 	validates :identity, numericality: true
