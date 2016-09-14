@@ -5,7 +5,6 @@
 #  id         :integer          not null, primary key
 #  name       :string
 #  phone      :string
-#  address    :string
 #  identity   :string
 #  cpf        :string
 #  birth      :date
