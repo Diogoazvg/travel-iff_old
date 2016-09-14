@@ -1,4 +1,5 @@
 class BusCompaniesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_bus_company, only: [:show, :edit, :update, :destroy]
 
   # GET /bus_companies
