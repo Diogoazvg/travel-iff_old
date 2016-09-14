@@ -2,40 +2,46 @@ pt-BR:
 
   Listing Students: Estudantes
   New Student:  Cadastrar Estudante
+  Student Info: Informações de Estudante
+
   Listing Drivers: Motoristas
   New Driver:  Cadastrar Motorista
+  Driver Info: Informações de Motorista
+  
   Listing Travels: Viagens
   New Travel: Cadastrar Viagem
-  Travel Info: Informações das Viagens
+  Travel Info: Informações da Viagem
+  
   Listing Vehicles: Veículos
   New Vehicle: Cadastrar Veículo
+  Vehicle Info: Informações de Veículo
+  
   Listing BusCompanies: Empresas
   New BusCompany: Cadastrar Empresa
+  Buscompany Info: Informações da Empresa
+  Editing BusCompany: Editar Empresa
+  
   Listing Events: Eventos
   New Event: Cadastrar Evento
+  Event Info: Informações do Evento
 
 
   activerecord:
     models:
-      command: Comando
-      category: Categoria
-
-      travel: Veículo
+      
+      travel: Viagem
       student: Estudante
       driver: Motorista
       vehicles: Veículos
       companies: Empresas
-      bus_company: Companhias
+      bus_company: Empresa
       event: Eventos
+      vehicle: Veículo
 
 
       user: Usuário
     attributes:
-      command:
-        name: "Nome"
-        description: "Descrição"
-        command: "Comando"
-        category: "Categoria"
+      
       person:
         name: "Nome:"
         phone: "Telefone:"
@@ -43,17 +49,40 @@ pt-BR:
         identity: "Identidade:"
         cpf: "CPF:"
         birth: "Data de Nascimento:"
+      
       driver:
         cnh: "CNH:"
         category: "Categoria:"
+        vehicle: "Veículo"
+      
       student:
         registration: "Registro:"
+        travel: "Viagem:"
+        event: "Evento:"
+      
       bus_company:
-        cnpj: "CNPJ"
-        name: "Nome"
+        cnpj: "CNPJ:"
+        name: "Nome:"
+      
       event:
-        name: "Nome"
-        day: "Data"
+        name: "Nome:"
+        day: "Data:"
+        description: "Descrição"
+        travel: "Viagem"
+      
+      vehicle:
+        seat: "Lugares:"
+        number: "Numero de Ordem:"
+        price: "Valor:"
+        travel: "Viagem:"
+        bus_company: "Companhia de Ônibus:"
+
+      travel:
+        name: "Nome:"
+        day: "Data:"
+        description: "Descrição:"
+
+
 
 
 

@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20160914204855) do
   create_table "people", force: :cascade do |t|
     t.string   "name"
     t.string   "phone"
+    t.string   "address"
     t.string   "identity"
     t.string   "cpf"
     t.date     "birth"
