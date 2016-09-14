@@ -11,4 +11,11 @@
 #
 
 class Event < ApplicationRecord
+	belongs_to :travel
+
+	validates :travel_id, presence: true
+	validates :name, presence: true
+	validates :name, uniqueness: true
+	validates :day, presence: true
+	validates :day, numericality: true	
 end

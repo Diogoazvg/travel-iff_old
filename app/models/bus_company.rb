@@ -10,4 +10,11 @@
 #
 
 class BusCompany < ApplicationRecord
+	has_many :vehicles
+
+	validates :cnpj, presence: true
+	validates :cnpj, numericality: true
+	validates :cnpj, uniqueness: true
+	validates :name, presence: true
+	validates :name, uniqueness: true
 end

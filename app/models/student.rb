@@ -12,12 +12,15 @@
 #
 
 class Student < ApplicationRecord
-	belongs_to :person
+	belongs_to :person, inverse_of: :students
 	belongs_to :event
 	belongs_to :travel
 	
-	validates :registration, uniqueness: true
+	#validates :registration, uniqueness: true
 	validates :registration, presence: true
+	validates :event_id, presence: true
+	validates :person, presence: true
+	validates :travel_id, presence: true
 
 	accepts_nested_attributes_for :person
 end
