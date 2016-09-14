@@ -2,12 +2,13 @@
 #
 # Table name: events
 #
-#  id         :integer          not null, primary key
-#  name       :string
-#  day        :date
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  travel_id  :integer
+#  id          :integer          not null, primary key
+#  name        :string
+#  day         :date
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  travel_id   :integer
+#  description :text
 #
 
 class Event < ApplicationRecord
@@ -17,5 +18,5 @@ class Event < ApplicationRecord
 	validates :name, presence: true
 	validates :name, uniqueness: true
 	validates :day, presence: true
-	validates :day, numericality: true	
+	validates :description, presence: true
 end
