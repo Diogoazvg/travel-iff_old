@@ -1,15 +1,63 @@
 pt-BR:
+
+  Listing Students: Estudantes
+  New Student:  Cadastrar Estudante
+  Listing Drivers: Motoristas
+  New Driver:  Cadastrar Motorista
+  Listing Travels: Viagens
+  New Travel: Cadastrar Viagem
+  Travel Info: Informações das Viagens
+  Listing Vehicles: Veículos
+  New Vehicle: Cadastrar Veículo
+  Listing BusCompanies: Empresas
+  New BusCompany: Cadastrar Empresa
+  Listing Events: Eventos
+  New Event: Cadastrar Evento
+
+
   activerecord:
     models:
       command: Comando
       category: Categoria
+
+      travel: Veículo
+      student: Estudante
+      driver: Motorista
+      vehicles: Veículos
+      companies: Empresas
+      bus_company: Companhias
+      event: Eventos
+
+
       user: Usuário
     attributes:
       command:
         name: "Nome"
         description: "Descrição"
         command: "Comando"
-        category: "Categoria" 
+        category: "Categoria"
+      person:
+        name: "Nome:"
+        phone: "Telefone:"
+        address: "Endereço:"
+        identity: "Identidade:"
+        cpf: "CPF:"
+        birth: "Data de Nascimento:"
+      driver:
+        cnh: "CNH:"
+        category: "Categoria:"
+      student:
+        registration: "Registro:"
+      bus_company:
+        cnpj: "CNPJ"
+        name: "Nome"
+      event:
+        name: "Nome"
+        day: "Data"
+
+
+
+
       category:
         name: "Categoria"
   commands:
