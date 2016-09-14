@@ -70,7 +70,7 @@ class DriversController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def driver_params
-      params.require(:driver).permit(:cnh, :category, 
-        person_attributes: [:name, :phone, :address, :identity, :cpf, :birth])
+      params.require(:driver).permit(:cnh, :category, :vehicle_id, 
+        person_attributes: [:name, :phone, :identity, :cpf, :birth])
     end
 end

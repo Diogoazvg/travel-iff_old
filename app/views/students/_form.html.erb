@@ -8,12 +8,13 @@
           <%= f.simple_fields_for :person, wrapper: :horizontal_form do |person| %>
             <%= person.input :name %>
             <%= person.input :phone %>
-            <%= person.input :address %>
             <%= person.input :identity %>
             <%= person.input :cpf %>
             <%= person.input :birth, as: :bootstrap_datepicker, input_html: {class: "form-control"} %>
           <% end %>
           <%= f.input :registration %>
+          <%= f.association :travel %>
+          <%= f.association :event %>
       </div>
 
       <div class="form-actions">

@@ -14,13 +14,12 @@
 #
 
 class Person < ApplicationRecord
-	has_many :people, inverse_of: :person 
 	has_many :drivers, inverse_of: :person
+	has_many :students, inverse_of: :person
 
 	validates :name, presence: true
 	validates :phone, presence: true
 	validates :phone, numericality: true
-	validates :address, presence: true
 	validates :identity, presence: true
 	validates :identity, uniqueness: true
 	validates :identity, numericality: true

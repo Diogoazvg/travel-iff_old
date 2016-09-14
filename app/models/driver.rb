@@ -19,6 +19,8 @@ class Driver < ApplicationRecord
 	validates :cnh, uniqueness: true
 	validates :cnh, numericality: true
 	validates :category, presence: true
+	validates :vehicle_id, presence: true
+	validates :person, presence: true
 
 	accepts_nested_attributes_for :person
 end
