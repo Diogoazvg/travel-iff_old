@@ -15,8 +15,35 @@
 <div class='panel panel-default'>
   <div class='panel-body'>
     <p>
-      <strong>Registration</strong>
+      <strong><%=t("Name")%></strong>
+      <%= @student.person.name %>
+    </p>
+    <p>
+      <strong><%=t("Phone")%></strong>
+      <%= @student.person.phone %>
+    </p>
+    <p>
+      <strong><%=t("Identity")%></strong>
+      <%= @student.person.identity %>
+    </p>
+    <p>
+      <strong><%=t("Cpf")%></strong>
+      <%= @student.person.cpf %>
+    </p>
+    <p>
+      <strong><%=t("Birth")%></strong>
+      <%= @student.person.birth %>
+    </p>
+    <p>
+      <strong><%=t("Registration")%></strong>
       <%= @student.registration %>
     </p>
   </div>
 </div>
+
+
+
+      
+      
+      
+      

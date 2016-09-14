@@ -15,11 +15,31 @@
 <div class='panel panel-default'>
   <div class='panel-body'>
     <p>
-      <strong>Cnh</strong>
+      <strong><%=t("Name")%></strong>
+      <%= @driver.person.name %>
+    </p>
+    <p>
+      <strong><%=t("Phone")%></strong>
+      <%= @driver.person.phone %>
+    </p>
+    <p>
+      <strong><%=t("Identity")%></strong>
+      <%= @driver.person.identity %>
+    </p>
+    <p>
+      <strong><%=t("Cpf")%></strong>
+      <%= @driver.person.cpf %>
+    </p>
+    <p>
+      <strong><%=t("Birth")%></strong>
+      <%= @driver.person.birth %>
+    </p>
+    <p>
+      <strong><%=t("Cnh")%></strong>
       <%= @driver.cnh %>
     </p>
     <p>
-      <strong>Category</strong>
+      <strong><%=t("Category")%></strong>
       <%= @driver.category %>
     </p>
   </div>
