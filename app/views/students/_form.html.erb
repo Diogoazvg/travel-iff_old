@@ -12,9 +12,9 @@
             <%= person.input :cpf %>
             <%= person.input :birth, as: :bootstrap_datepicker, input_html: {class: "form-control"} %>
           <% end %>
-          <%= f.input :registration %>
           <%= f.association :travel %>
           <%= f.association :event %>
+          <%= f.input :registration, as: :file, wrapper: :horizontal_form %>
       </div>
 
       <div class="form-actions">
