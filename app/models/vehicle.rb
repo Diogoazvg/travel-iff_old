@@ -25,4 +25,10 @@ class Vehicle < ApplicationRecord
 	validates :price, numericality: true
 	validates :travel_id, presence: true
 	validates :bus_company_id, presence: true
+
+	def to_s
+		"Empresa -->(#{bus_company.name}) -- Número do Veículo -->(#{number})"	
+	end
+
+	paginates_per 5
 end

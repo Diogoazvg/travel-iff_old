@@ -12,7 +12,7 @@
 <table class='table table-responsive table-hover table-stripped' id='students'>
   <thead>
   <tr>
-      <th>Registration</th>
+      <th><%=t("Name")%></th>
     <th></th>
   </tr>
 
@@ -21,7 +21,7 @@
   <tbody>
     <% @students.each do |student| %>
     <tr>
-        <td><%= student.registration %></td>
+        <td><%= student.person.name %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), student_path(student), class: 'btn btn-sm btn-info' %>
         <%= link_to t('Edit'), edit_student_path(student), class: 'btn btn-sm btn-warning' %>
@@ -31,4 +31,4 @@
     <% end %>
   </tbody>
 </table>
-<!--%%= paginate @students %-->
+<%= paginate @students %>

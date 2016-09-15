@@ -12,8 +12,7 @@
 <table class='table table-responsive table-hover table-stripped' id='drivers'>
   <thead>
   <tr>
-      <th>Cnh</th>
-      <th>Category</th>
+      <th><%=t("Name")%></th>
     <th></th>
   </tr>
 
@@ -22,8 +21,7 @@
   <tbody>
     <% @drivers.each do |driver| %>
     <tr>
-        <td><%= driver.cnh %></td>
-        <td><%= driver.category %></td>
+        <td><%= driver.person.name %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), driver_path(driver), class: 'btn btn-sm btn-info' %>
         <%= link_to t('Edit'), edit_driver_path(driver), class: 'btn btn-sm btn-warning' %>
@@ -33,4 +31,4 @@
     <% end %>
   </tbody>
 </table>
-<!--%%= paginate @drivers %-->
+<%= paginate @drivers %>
