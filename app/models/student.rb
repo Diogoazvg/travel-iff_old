@@ -23,4 +23,6 @@ class Student < ApplicationRecord
 	validates :travel_id, presence: true
 
 	accepts_nested_attributes_for :person
+
+	paginates_per 5
 end

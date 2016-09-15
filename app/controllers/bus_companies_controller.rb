@@ -4,7 +4,7 @@ class BusCompaniesController < ApplicationController
   # GET /bus_companies
   # GET /bus_companies.json
   def index
-    @bus_companies = BusCompany.all
+    @bus_companies = BusCompany.all.order('created_at DESC').page params[:page]
   end
 
   # GET /bus_companies/1
