@@ -3,18 +3,30 @@ pt-BR:
   Listing Students: Estudantes
   New Student:  Cadastrar Estudante
   Student Info: Informações de Estudante
+  Registration: Registro
+  Editing Student: Editar Estudante
 
   Listing Drivers: Motoristas
   New Driver:  Cadastrar Motorista
   Driver Info: Informações de Motorista
+  Name: Nome
+  Phone: Telefone
+  Identity: Identidade
+  Cpf: CPF
+  Birth: Idade
+  Cnh: CNH
+  Category: Categoria
+  Editing Driver: Editar Motorista
   
   Listing Travels: Viagens
   New Travel: Cadastrar Viagem
   Travel Info: Informações da Viagem
+  Editing Travel: Editar Viagem
   
   Listing Vehicles: Veículos
   New Vehicle: Cadastrar Veículo
   Vehicle Info: Informações de Veículo
+  Editing Vehicle: Editar Veículo
   
   Listing BusCompanies: Empresas
   New BusCompany: Cadastrar Empresa
@@ -24,6 +36,7 @@ pt-BR:
   Listing Events: Eventos
   New Event: Cadastrar Evento
   Event Info: Informações do Evento
+  Editing Event: Editar Evento
 
 
   activerecord:
