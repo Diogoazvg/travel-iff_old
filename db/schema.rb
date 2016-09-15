@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160914204855) do
+ActiveRecord::Schema.define(version: 20160915170836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20160914204855) do
   create_table "people", force: :cascade do |t|
     t.string   "name"
     t.string   "phone"
-    t.string   "address"
     t.string   "identity"
     t.string   "cpf"
     t.date     "birth"
@@ -55,12 +54,15 @@ ActiveRecord::Schema.define(version: 20160914204855) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string   "registration"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "person_id"
     t.integer  "event_id"
     t.integer  "travel_id"
+    t.string   "registration_file_name"
+    t.string   "registration_content_type"
+    t.integer  "registration_file_size"
+    t.datetime "registration_updated_at"
     t.index ["event_id"], name: "index_students_on_event_id", using: :btree
     t.index ["person_id"], name: "index_students_on_person_id", using: :btree
     t.index ["travel_id"], name: "index_students_on_travel_id", using: :btree

@@ -26,6 +26,7 @@
         <%= link_to t('Show'), student_path(student), class: 'btn btn-sm btn-info' %>
         <%= link_to t('Edit'), edit_student_path(student), class: 'btn btn-sm btn-warning' %>
         <%= link_to t('Destroy'), student_path(student), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t('Are you sure?') } %>
+        <%= link_to t("Image"), student.registration.url(:original, false),class: 'btn btn-sm btn-teste', id: 'image' %>
       </td>
     </tr>
     <% end %>
