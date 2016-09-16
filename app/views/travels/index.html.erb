@@ -1,6 +1,6 @@
 <div class='page-header'>
   <h1>
-    <%= t('Listing Travels') %> (<%= @count_travels %>)  <small><%= @travel %></small>
+    <%= t('Listing Travels') %> (<%= @travels.count %>)  <small><%= @travel %></small>
     <div class='pull-right'>
       <%= link_to new_travel_path(), class: 'btn btn-info' do %>
         <i class='glyphicon glyphicon-plus'></i> <%= t('New Travel') %>

@@ -1,6 +1,6 @@
 <div class='page-header'>
   <h1>
-    <%= t('Listing Vehicles') %> (<%= @count_vehicles %>)  <small><%= @vehicle %></small>
+    <%= t('Listing Vehicles') %> (<%= @vehicles.count %>)  <small><%= @vehicle %></small>
     <div class='pull-right'>
       <%= link_to new_vehicle_path(), class: 'btn btn-info' do %>
         <i class='glyphicon glyphicon-plus'></i> <%= t('New Vehicle') %>
@@ -13,7 +13,7 @@
   <thead>
   <tr>
       <th>Seat</th>
-      <th>Number</th>
+      <th>Order_Number</th>
       <th>Price</th>
     <th></th>
   </tr>

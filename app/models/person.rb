@@ -20,10 +20,10 @@ class Person < ApplicationRecord
 	validates :phone, presence: true
 	validates :phone, numericality: true
 	validates :identity, presence: true
-	validates :identity, uniqueness: true
+	validates :identity, uniqueness: true, on: :new
 	validates :identity, numericality: true
 	validates :cpf, presence: true
-	validates :cpf, uniqueness: true
+	validates :cpf, uniqueness: true, on: :new
 	validates :cpf, numericality: true
 	validates :birth, presence: true
 end
