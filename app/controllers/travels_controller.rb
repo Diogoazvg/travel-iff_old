@@ -10,6 +10,13 @@ class TravelsController < ApplicationController
   # GET /travels/1
   # GET /travels/1.json
   def show
+    respond_to do |format|
+        format.html
+        format.pdf { render pdf: "travels-list-report",
+          header: {center: "RELATÓRIO DE VIAGENS"},
+          footer: { center: "[page] of [topage]" }
+        }
+    end
   end
 
   # GET /travels/new
