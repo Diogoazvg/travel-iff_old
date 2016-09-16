@@ -5,7 +5,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Travel IFF</a>
+                <a class="navbar-brand" href="#page-top"><%=t("Travel IFF")%></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,14 +16,14 @@
                     </li>
                     <%= render 'layouts/nav_links_for_auth.html.erb' %>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#portfolio"><%=t("Portfolio")%></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#about"><%=t("About")%></a>
                     </li>
-                    <li class="page-scroll">
+                    <!--li class="page-scroll">
                         <a href="#contact">Contact</a>
-                    </li>
+                    </li-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<h2><%=t("Log in")%></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
@@ -7,7 +7,7 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div><%= f.submit t('.sign_in', :default => "Sign in"), class: "btn btn-lg btn-success btn-block" %></div>
+  <div><%= f.submit t('.sign_in', :default => t("Sign in")), class: "btn btn-lg btn-success btn-block" %></div>
 
   <%= render "devise/shared/links" %>
 <% end %>
