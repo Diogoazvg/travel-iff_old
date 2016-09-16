@@ -26,6 +26,37 @@ pt-BR:
   Forgot your password?: Esqueceu sua senha?
   TravelIff: Controle de Viagem
 
+  Are you sure?: Você tem certeza?
+  Show: Visualizar
+  Edit: Editar
+  Destroy: Excluir
+  Back: Voltar
+  Image: Imagem
+  Travel_name: Nome da Viagem
+  Event: Evento
+  Driver: Motorista
+  Student: Estudante
+  Travels: "  Viagens"
+  Events: "  Eventos"
+  Students: "  Estudantes"
+  Drivers: "  Motoristas"
+  Vehicle: "  Veículos"
+  Bus Company: "  Empresas"
+
+  Table_bus_company: Tabela de Empresas
+  Table_driver: Tabela de Motoristas
+  Table_event: Tabela de Eventos
+  Table_student: Tabela de Estudantes
+  Table_travel: Tabela de Viagens
+  Table_vehicle: Tabela de Veículos
+
+  Name_event: "Nome: "
+  Day_event: "Data: "
+  Description_event: "Descrição: "
+  student_name: "Nome: "
+  order_number: "Numero de Ordem: "
+  seat: "Lugares: "
+  Empresa: "Empresa: "
 
   Contact Me: Contato
   Name: Nome
@@ -50,14 +81,21 @@ pt-BR:
   Listing Drivers: Motoristas
   New Driver:  Cadastrar Motorista
   Driver Info: Informações de Motorista
-  Name: Nome
-  Phone: Telefone
-  Identity: Identidade
-  Cpf: CPF
-  Birth: Idade
-  Cnh: CNH
-  Category: Categoria
+  Name: "Nome: "
+  Phone: "Telefone: "
+  Identity: "Identidade: "
+  Cpf: "CPF: "
+  Birth: "Idade: "
+  Cnh: "CNH: "
+  Category: "Categoria: "
   Editing Driver: Editar Motorista
+  Cnpj: "CNPJ: "
+  Seat: "Lugares: "
+  Number: "Numero de Ordem: "
+  Price: "Valor: "
+  Day: "Data: "
+  Description: "Descrição: "
+  Travell: "Viagem: "
   
   Listing Travels: Viagens
   New Travel: Cadastrar Viagem
@@ -98,44 +136,44 @@ pt-BR:
     attributes:
       
       person:
-        name: "Nome:"
-        phone: "Telefone:"
-        address: "Endereço:"
-        identity: "Identidade:"
-        cpf: "CPF:"
-        birth: "Data de Nascimento:"
+        name: "Nome: "
+        phone: "Telefone: "
+        address: "Endereço: "
+        identity: "Identidade: "
+        cpf: "CPF: "
+        birth: "Data de Nascimento: "
       
       driver:
-        cnh: "CNH:"
-        category: "Categoria:"
-        vehicle: "Veículo"
+        cnh: "CNH: "
+        category: "Categoria: "
+        vehicle: "Veículo: "
       
       student:
-        registration: "Registro:"
-        travel: "Viagem:"
-        event: "Evento:"
+        registration: "Registro: "
+        travel: "Viagem: "
+        event: "Evento: "
       
       bus_company:
-        cnpj: "CNPJ:"
-        name: "Nome:"
+        cnpj: "CNPJ: "
+        name: "Nome: "
       
       event:
-        name: "Nome do Evento:"
-        day: "Data:"
-        description: "Descrição"
-        travel: "Viagem"
+        name: "Nome do Evento: "
+        day: "Data: "
+        description: "Descrição: "
+        travel: "Viagem: "
       
       vehicle:
-        seat: "Lugares:"
-        number: "Numero de Ordem:"
-        price: "Valor:"
-        travel: "Viagem:"
-        bus_company: "Companhia de Ônibus:"
+        seat: "Lugares: "
+        order_number: "Numero de Ordem: "
+        price: "Valor: "
+        travel: "Viagem: "
+        bus_company: "Companhia de Ônibus: "
 
       travel:
-        name: "Nome da Viagem:"
-        day: "Data:"
-        description: "Descrição:"
+        name: "Nome da Viagem: "
+        day: "Data: "
+        description: "Descrição: "
 
     pagination:
       truncate: "truncar"
