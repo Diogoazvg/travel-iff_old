@@ -1,0 +1,47 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="nav-side-menu">
+    <div class="brand">IFF</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a>
+                    <i><%= link_to t("  Travels"), travels_path, class: 'fa fa-plane fa-lg' %></i>
+                  </a>
+                </li>
+
+                 <li>
+                  <a>
+                    <i><%= link_to t("  Events"), events_path, class: 'fa fa-suitcase fa-lg' %></i>
+                  </a>
+                  </li>
+
+                 <li>
+                  <a>
+                    <i><%= link_to t("  Students"), students_path, class: 'fa fa-users fa-lg' %></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a>
+                  <i><%= link_to t("  Drivers"), drivers_path, class: 'fa fa-dashboard fa-lg' %></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a>
+                    <i><%= link_to t("  Vehicle"), vehicles_path, class: 'fa fa-bus fa-lg' %></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a>
+                    <i><%= link_to t("  Bus Company"), bus_companies_path, class: 'fa fa-building-o fa-lg' %></i>
+                  </a>
+                </li>
+            </ul>
+     </div>
+</div>
