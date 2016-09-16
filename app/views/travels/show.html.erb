@@ -14,6 +14,7 @@
 
 <div class='panel panel-default'>
   <div class='panel-body'>
+  <h1><%=t("Travel")%></h1>
     <p>
       <strong>Name</strong>
       <%= @travel.name %>
@@ -26,5 +27,52 @@
       <strong>Description</strong>
       <%= @travel.description %>
     </p>
+
+    <hr><h1><%=t("Event")%></h1></hr>
+    <% @travel.events.each do |event|%>
+      <p>
+        <strong><%=t("Name_event")%></strong>
+          <%= event.name %>  
+      </p>
+      <p>
+        <strong><%=t("Day_event")%></strong>
+          <%= event.day %>  
+      </p>
+      <p>
+        <strong><%=t("Description_event")%></strong>
+          <%= event.description %>  
+      </p>  
+    <% end %>
+
+    <hr><h1><%=t("Driver")%></h1></hr>
+    <% @travel.vehicles.each do |vehicle|%>
+      <p>
+        <strong><%=t("order_number")%></strong>
+          <%= vehicle.order_number %>  
+      </p>
+      <p>
+        <strong><%=t("seat")%></strong>
+          <%= vehicle.seat %>  
+      </p>
+      <p>
+        <strong><%=t("Empresa")%></strong>
+          <%= vehicle.to_s %>  
+      </p>
+      <p>
+        <strong><%=t("Vehicle")%></strong>
+          <% vehicle.drivers.each do |driver| %>
+            <%= driver.person.name %>
+          <% end %>    
+      </p>
+    <% end %>
+
+    <hr><h1><%=t("Student")%></h1></hr>
+    <% @travel.students.each do |student|%>
+      <p>
+        <strong><%=t("student_name")%></strong>
+          <%= student.person.name %>  
+      </p>
+    <% end %>   
+
   </div>
 </div>

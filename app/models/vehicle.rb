@@ -4,12 +4,12 @@
 #
 #  id             :integer          not null, primary key
 #  seat           :integer
-#  number         :integer
 #  price          :float
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  travel_id      :integer
 #  bus_company_id :integer
+#  order_number   :integer
 #
 
 class Vehicle < ApplicationRecord
@@ -19,15 +19,15 @@ class Vehicle < ApplicationRecord
 
 	validates :seat, presence: true
 	validates :seat, numericality: true
-	validates :number, presence: true
-	validates :number, numericality: true
+	validates :order_number, presence: true
+	validates :order_number, numericality: true
 	validates :price, presence: true
 	validates :price, numericality: true
 	validates :travel_id, presence: true
 	validates :bus_company_id, presence: true
 
 	def to_s
-		"Empresa -->(#{bus_company.name}) -- Número do Veículo -->(#{number})"	
+	   "#{bus_company.name} -- Veículo(#{order_number})"	
 	end
 
 	paginates_per 5
