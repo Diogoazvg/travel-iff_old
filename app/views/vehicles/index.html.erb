@@ -24,7 +24,7 @@
     <% @vehicles.each do |vehicle| %>
     <tr>
         <td><%= vehicle.seat %></td>
-        <td><%= vehicle.number %></td>
+        <td><%= vehicle.order_number %></td>
         <td><%= vehicle.price %></td>
       <td class='actions text-center'>
         <%= link_to t('Show'), vehicle_path(vehicle), class: 'btn btn-sm btn-info' %>
