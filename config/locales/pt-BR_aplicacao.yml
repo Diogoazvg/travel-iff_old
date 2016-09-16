@@ -1,5 +1,46 @@
 pt-BR:
 
+  Start Bootstrap: Controle de Viagem
+
+  Portfolio: Imagens
+  About: Sobre
+  Contact: Contato
+
+  Start Bootstrap: Controle de Viagem
+  Web Developer - Graphic Artist - User Experience Designer: Ruby - Rails - Devise - Bootstrap - Paperclip - SimpleForm - Postgres
+  Freelancer: Aplicação criada para avaliação final da disciplina de Framework para Desenvolvimento de Sistemas.
+  Whether: Tem como foco a criação de uma aplicação para cadastramento e acompanhamento de viagens.
+  Copyright: Aplicação Ruby on Rails
+  Project Title: Imagens
+  Use: Exemplo de viagens.
+  April 2014: Setembro
+  Web Development: "2016"
+  Client: "Cliente:"
+  Date: "Data:"
+  Service: "Serviço:"
+  Close: Fechar
+  Sign up: Criar Login
+  Log in: Entrar
+  Travel IFF: Controle de Viagem
+  Sign in: Entrar
+  Forgot your password?: Esqueceu sua senha?
+  TravelIff: Controle de Viagem
+
+
+  Contact Me: Contato
+  Name: Nome
+  Email Address: Email
+  Phone Number: Telefone
+  Message: Mensagem
+  Send: Enviar
+  Location: Endereço
+  endereço: Rua das Couves
+  Beverly: Avenida Liberdade
+  Around the Web: Links
+  About Freelancer: Sobre
+  Freelance: Estudantes da Pós Análise e Gestão em Sistemas de Informação
+
+
   Listing Students: Estudantes
   New Student:  Cadastrar Estudante
   Student Info: Informações de Estudante
@@ -22,6 +63,7 @@ pt-BR:
   New Travel: Cadastrar Viagem
   Travel Info: Informações da Viagem
   Editing Travel: Editar Viagem
+  Travel: Controle de Viagem
   
   Listing Vehicles: Veículos
   New Vehicle: Cadastrar Veículo
@@ -78,7 +120,7 @@ pt-BR:
         name: "Nome:"
       
       event:
-        name: "Nome:"
+        name: "Nome do Evento:"
         day: "Data:"
         description: "Descrição"
         travel: "Viagem"
@@ -91,7 +133,7 @@ pt-BR:
         bus_company: "Companhia de Ônibus:"
 
       travel:
-        name: "Nome:"
+        name: "Nome da Viagem:"
         day: "Data:"
         description: "Descrição:"
 
