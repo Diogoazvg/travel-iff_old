@@ -12,7 +12,7 @@
 #
 
 class Event < ApplicationRecord
-	belongs_to :travel
+	belongs_to :travel, inverse_of: :events
 
 	validates :travel_id, presence: true
 	validates :name, presence: true
