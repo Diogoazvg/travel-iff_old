@@ -25,5 +25,8 @@ class Person < ApplicationRecord
 	validates :cpf, presence: true
 	validates :cpf, uniqueness: true, on: :new
 	validates :cpf, numericality: true
+	validates_each :cpf do |record, attr, value|
+    	record.errors.add(attr, 'não é válido') unless CpfUtils.cpf_valido? value
+  	end
 	validates :birth, presence: true
 end
