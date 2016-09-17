@@ -28,7 +28,7 @@ class BusCompaniesController < ApplicationController
 
     respond_to do |format|
       if @bus_company.save
-        format.html { redirect_to @bus_company, notice: 'Bus company was successfully created.' }
+        format.html { redirect_to @bus_company, notice: t('Bus company was successfully created.') }
         format.json { render :show, status: :created, location: @bus_company }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class BusCompaniesController < ApplicationController
   def update
     respond_to do |format|
       if @bus_company.update(bus_company_params)
-        format.html { redirect_to @bus_company, notice: 'Bus company was successfully updated.' }
+        format.html { redirect_to @bus_company, notice: t('Bus company was successfully updated.') }
         format.json { render :show, status: :ok, location: @bus_company }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class BusCompaniesController < ApplicationController
   def destroy
     @bus_company.destroy
     respond_to do |format|
-      format.html { redirect_to bus_companies_url, notice: 'Bus company was successfully destroyed.' }
+      format.html { redirect_to bus_companies_url, notice: t('Bus company was successfully destroyed.') }
       format.json { head :no_content }
     end
   end
