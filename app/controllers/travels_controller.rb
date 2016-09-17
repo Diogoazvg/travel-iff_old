@@ -5,6 +5,18 @@ class TravelsController < ApplicationController
   # GET /travels.json
   def index
     @travels = Travel.all.order('created_at DESC').page params[:page]
+
+    if params[:search] != nil
+      @travels = Travel.search(params[:search]).page(params[:page])
+      if @travels.empty?()
+        @travels = Travel.search2(params[:search]).page(params[:page])
+        if @travels.empty?()
+          @travels = Travel.search3(params[:search]).page(params[:page])
+        end  
+      end
+    else 
+      @travels = Travel.all.page(params[:page]).per(15)
+    end
   end
 
   # GET /travels/1
