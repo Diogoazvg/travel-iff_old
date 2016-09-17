@@ -21,4 +21,13 @@ class Travel < ApplicationRecord
 	validates :description, presence: true
 
 	paginates_per 5
+
+	scope :search, -> (busca){where("name like ?", "%#{busca}%")
+  	}
+
+  	scope :search2, -> (busca){where("description like ?", "%#{busca}%")
+  	}
+
+  	scope :search3, -> (busca){where("command like ?", "%#{busca}%")
+  	}
 end
