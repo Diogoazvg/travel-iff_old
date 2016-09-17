@@ -26,6 +26,27 @@ pt-BR:
   Forgot your password?: Esqueceu sua senha?
   TravelIff: Controle de Viagem
 
+  Travel was successfully created: Viagem foi criada com sucesso.
+  Travel was successfully updated: Viagem foi atualizada com sucesso.
+  Travel was successfully destroyed: Viagem foi excluída com sucesso.
+  Event was successfully created: Evento foi criado com sucesso.
+  Event was successfully updated: Evento foi atualizado com sucesso.
+  Event was successfully destroyed: Evento foi excluído com sucesso.
+  Student was successfully created: Estudante foi criado com sucesso.
+  Student was successfully updated: Estudante foi atualizado com sucesso.
+  Student was successfully destroyed: Estudante foi excluído com sucesso.
+  Driver was successfully created: Motorista foi criado com sucesso.
+  Driver was successfully updated: Motorista foi atualizado com sucesso.
+  Driver was successfully destroyed: Motorista foi excluído com sucesso.
+  Vehicle was successfully created: Veículo foi criado com sucesso.
+  Vehicle was successfully updated: Veículo foi atualizado com sucesso.
+  Vehicle was successfully destroyed: Veículo foi excluído com sucesso.
+  Bus company was successfully created: Companhia foi criada com sucesso.
+  Bus company was successfully updated: Companhia foi atualizada com sucesso.
+  Bus company was successfully destroyed: Companhia foi excluída com sucesso.
+
+
+
   Are you sure?: Você tem certeza?
   Show: Visualizar
   Edit: Editar
