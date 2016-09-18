@@ -9,7 +9,7 @@
 
 # Ignore all logfiles and tempfiles.
 #/config/environments/production.rb
-/public/system
+#/public/system
 /log/*
 /tmp/*
 !/log/.keep
