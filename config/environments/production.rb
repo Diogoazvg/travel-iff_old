@@ -57,15 +57,16 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "TravelIff_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.default_url_options = { host: 'https://travel-iff.herokuapp.com' }
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
     domain: "gmail.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "diogo.azvg2@gmail.com",#Rails.application.secrets.email_provider_username,
-    password: "01713001",#Rails.application.secrets.email_provider_password
-    :openssl_verify_mode  => 'none'
+    :user_name: ENV["GMAIL_USERNAME"],
+    :password: ENV["GMAIL_PASSWORD"],#Rails.application.secrets.email_provider_password
+    :openssl_verify_mode: 'none'
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
