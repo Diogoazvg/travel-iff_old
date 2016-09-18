@@ -4,19 +4,8 @@ class TravelsController < ApplicationController
   # GET /travels
   # GET /travels.json
   def index
-    @travels = Travel.all.order('created_at DESC').page params[:page]
-
-    if params[:search] != nil
-      @travels = Travel.search(params[:search]).page(params[:page])
-      if @travels.empty?()
-        @travels = Travel.search2(params[:search]).page(params[:page])
-        if @travels.empty?()
-          @travels = Travel.search3(params[:search]).page(params[:page])
-        end  
-      end
-    else 
-      @travels = Travel.all.page(params[:page]).per(15)
-    end
+    @q = Travel.ransack(params[:q])
+    @travels = @q.result(distinct: true).page params[:page]
   end
 
   # GET /travels/1
@@ -47,7 +36,7 @@ class TravelsController < ApplicationController
 
     respond_to do |format|
       if @travel.save
-        format.html { redirect_to @travel, notice: t('Travel was successfully created.') }
+        format.html { redirect_to @travel, notice: 'Travel was successfully created.' }
         format.json { render :show, status: :created, location: @travel }
       else
         format.html { render :new }
@@ -61,7 +50,7 @@ class TravelsController < ApplicationController
   def update
     respond_to do |format|
       if @travel.update(travel_params)
-        format.html { redirect_to @travel, notice: t('Travel was successfully updated.') }
+        format.html { redirect_to @travel, notice: 'Travel was successfully updated.' }
         format.json { render :show, status: :ok, location: @travel }
       else
         format.html { render :edit }
@@ -75,7 +64,7 @@ class TravelsController < ApplicationController
   def destroy
     @travel.destroy
     respond_to do |format|
-      format.html { redirect_to travels_url, notice: t('Travel was successfully destroyed.') }
+      format.html { redirect_to travels_url, notice: 'Travel was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
