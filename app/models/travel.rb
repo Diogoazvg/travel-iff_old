@@ -4,10 +4,10 @@
 #
 #  id          :integer          not null, primary key
 #  name        :string
-#  day         :date
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  description :text
+#  day         :string
 #
 
 class Travel < ApplicationRecord
