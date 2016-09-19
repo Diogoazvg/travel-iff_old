@@ -55,21 +55,21 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "TravelIff_#{Rails.env}"
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: Rails.application.secrets.domain_name,
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["SENDGRIP_USERNAME"],#Rails.application.secrets.email_provider_username,
-    password: ENV["SENDGRIP_PASSWORD"],#Rails.application.secrets.email_provider_password
-    :openssl_verify_mode  => 'none'
-  }
-  # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'https://travel-iff.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://travel-iff.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default charset: 'utf-8'
+  config.action_mailer.smtp_settings = {
+    address: "smtp.sendgrid.net",
+    port: 587, 
+    domain: 'heroku.com',
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    user_name: ENV['SENDGRID_USERNAME'],#Rails.application.secrets.email_provider_username,
+    password: ENV['SENDGRID_PASSWORD'],#Rails.application.secrets.email_provider_password
+    openssl_verify_mode: 'none'
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
