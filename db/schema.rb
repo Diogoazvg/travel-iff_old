@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918001004) do
+ActiveRecord::Schema.define(version: 20160922014455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,19 +54,24 @@ ActiveRecord::Schema.define(version: 20160918001004) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "student_events", force: :cascade do |t|
+    t.integer  "student_id"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_student_events_on_event_id", using: :btree
+    t.index ["student_id"], name: "index_student_events_on_student_id", using: :btree
+  end
+
   create_table "students", force: :cascade do |t|
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.integer  "person_id"
-    t.integer  "event_id"
-    t.integer  "travel_id"
     t.string   "registration_file_name"
     t.string   "registration_content_type"
     t.integer  "registration_file_size"
     t.datetime "registration_updated_at"
-    t.index ["event_id"], name: "index_students_on_event_id", using: :btree
     t.index ["person_id"], name: "index_students_on_person_id", using: :btree
-    t.index ["travel_id"], name: "index_students_on_travel_id", using: :btree
   end
 
   create_table "travels", force: :cascade do |t|
@@ -113,9 +118,9 @@ ActiveRecord::Schema.define(version: 20160918001004) do
   add_foreign_key "drivers", "people"
   add_foreign_key "drivers", "vehicles"
   add_foreign_key "events", "travels"
-  add_foreign_key "students", "events"
+  add_foreign_key "student_events", "events"
+  add_foreign_key "student_events", "students"
   add_foreign_key "students", "people"
-  add_foreign_key "students", "travels"
   add_foreign_key "vehicles", "bus_companies"
   add_foreign_key "vehicles", "travels"
 end
