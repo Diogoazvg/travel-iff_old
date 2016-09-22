@@ -13,7 +13,6 @@
 class Travel < ApplicationRecord
 	has_many :events
 	has_many :vehicles
-	has_many :students
 
 	validates :name, presence: true
 	validates :name, uniqueness: true

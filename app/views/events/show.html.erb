@@ -30,5 +30,13 @@
       <strong><%=t("Travell")%></strong>
       <%= @event.travel.name %>
     </p>
+    <p>
+      <h1><%=t("Students")%></h1>
+      <% @event.student_events.each do |student_event| %>
+      <li>
+        <%= student_event.student.person.name %>
+      </li>  
+      <% end %>
+    </p>
   </div>
 </div>

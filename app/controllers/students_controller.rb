@@ -1,10 +1,12 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :set_events, only: [:show, :edit, :update, :destroy]
 
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all.order('created_at DESC').page params[:page]
+    @q = Student.ransack(params[:q])
+    @students = @q.result(distinct: true).page params[:page]
   end
 
   # GET /students/1
@@ -20,6 +22,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1/edit
   def edit
+    @student.student_events.build
   end
 
   # POST /students
@@ -66,11 +69,17 @@ class StudentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_student
       @student = Student.find(params[:id])
+      @person = @student.person
+    end
+
+    def set_events
+      @events = Event.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:registration, :event_id, :travel_id, 
-        person_attributes: [:name, :phone, :identity, :cpf, :birth])
+      params.require(:student).permit(:registration, 
+        person_attributes: [:name, :phone, :identity, :cpf, :birth, :id],
+        student_events_attributes: [:event_id, :id])
     end
 end

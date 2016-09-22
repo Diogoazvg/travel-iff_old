@@ -30,35 +30,27 @@
       </p>  
     <% end %>
 
-    <hr><h1><%=t("Driver")%></h1></hr>
-    <% @travel.vehicles.each do |vehicle|%>
+  <hr><h1><!--%=t("Driver")%--></h1></hr>
+    <!--% @travel.vehicles.each do |vehicle|%-->
       <p>
-        <strong><%=t("order_number")%></strong>
-          <%= vehicle.order_number %>  
+        <strong><!--%=t("order_number")%--></strong>
+          <!--%= vehicle.order_number %-->  
       </p>
       <p>
-        <strong><%=t("seat")%></strong>
-          <%= vehicle.seat %>  
+        <strong><!--%=t("seat")%--></strong>
+          <!--%= vehicle.seat %-->  
       </p>
       <p>
-        <strong><%=t("Empresa")%></strong>
-          <%= vehicle.to_s %>  
+        <strong><!--%=t("Empresa")%--></strong>
+          <!--%= vehicle.to_s %-->  
       </p>
       <p>
-        <strong><%=t("Vehicle")%></strong>
-          <% vehicle.drivers.each do |driver| %>
-            <%= driver.person.name %>
-          <% end %>    
+        <strong><!--%=t("Vehicle")%--></strong>
+          <!--% vehicle.drivers.each do |driver| %-->
+            <!--%= driver.person.name %-->
+          <!--% end %-->    
       </p>
-    <% end %>
-
-    <hr><h1><%=t("Student")%></h1></hr>
-    <% @travel.students.each do |student|%>
-      <p>
-        <strong><%=t("student_name")%></strong>
-          <%= student.person.name %>  
-      </p>
-    <% end %>   
-
+    <!--% end %-->
   </div>
 </div>
+

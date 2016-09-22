@@ -19,13 +19,10 @@ class Person < ApplicationRecord
 
 	validates :name, presence: true
 	validates :phone, presence: true
-	validates :phone, numericality: true
 	validates :identity, presence: true
 	validates :identity, uniqueness: true, on: :new
-	validates :identity, numericality: true
 	validates :cpf, presence: true
 	validates :cpf, uniqueness: true, on: :new
-	validates :cpf, numericality: true
 	validates_each :cpf do |record, attr, value|
     	record.errors.add(attr, 'não é válido') unless CpfUtils.cpf_valido? value
   	end
